@@ -1,0 +1,151 @@
+.page-container-book {
+   padding-left: 14%; padding-right: 14%; text-align: justify;
+}
+
+.book {
+	width: 45%;
+}
+
+
+#ar {
+	width: 100%;
+	height: 100%;
+	margin: 5% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+#ar .turn-page {
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+#ar div {
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-position: center center;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 1%;
+  width: 100%;
+}
+.aspect {
+  padding-bottom: 70%;
+  position: relative;
+  width: 100%;
+}
+.aspect-inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.flipbook {
+  height: 100%;
+  transition: margin-left 0.25s ease-out;
+  width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flipbook .page {
+  height: 100%;
+  width: 100%;
+}
+
+.flipbook .page img {
+  width: 100%;
+  height: 100%;
+}
+
+.download {
+  background-color: #f4f4f4;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 1%;
+  top: 30%;
+  z-index: 1000;
+  animation: 2s slidein;
+}
+@keyframes slidein {
+  0% {left: -1%; opacity: 0;}
+  100% {
+    left: 0%; opacity: 1;
+  }
+}
+
+.flipbook .shadow{
+box-shadow: 0 4px 10px #666;
+}
+
+#loader {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      z-index: 150;
+}
+
+#count {
+  color: rgb(177,17,22);
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+.page-container-book {
+   padding-left: 1%; padding-right: 1%; text-align: justify;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  margin: 1%;
+  width: 100%;
+}
+
+.download {
+  background-color: #f4f4f4;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 1%;
+  top: 30%;
+  z-index: 1000;
+  opacity: 0;
+  animation: 2s slideout;
+}
+
+.download:hover {
+ animation: 2s slidein;
+ opacity: 1; 
+}
+@keyframes slideout {
+  0% {left: 0%; opacity: 1;}
+  100% {
+    left: -1%; opacity: 0;
+  }
+}
+@keyframes slidein {
+  0% {left: -1%; opacity: 0;}
+  100% {
+    left: 0% opacity: 1;
+  }
+}
+
+}
